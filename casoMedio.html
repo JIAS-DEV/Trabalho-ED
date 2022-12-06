@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Caso Médio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="src/styles.css" rel="stylesheet">
+    <link href="https://developers.google.com/chart/interactive/docs/gallery/linechart">
+</head>
+
+<body>
+    <header>
+        <img src="src/marcaifms.png">
+    </header>
+
+    <section>
+        <div class="col-3 col-s-12">
+            <div class="aside">
+                <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Menu</button>
+
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                    aria-labelledby="offcanvasWithBothOptionsLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <nav>
+                            <ul>
+                                <ul>
+                                    <li><a href="bubbleSort.html">Bubble Sort;</a></li>
+                                    <li><a href="selectionSort.html">Selection Sort;</a></li>
+                                    <li><a href="insertionSort.html">Insertion Sort;</a></li>
+                                    <li><a href="mergeSort.html">Merge Sort;</a></li>
+                                    <li><a href="quickSort.html">Quick Sort;</a></li>
+                                    <li><a href="radixSort.html">Radix Sort;</a></li>
+                                    <li><a href="shellSort.html">Shell Sort;</a></li>
+                                    <li><a href="gnomeSort.html">Gnome Sort;</a></li>
+                                    <li><a href="pigeonHoleSort.html">Pigeonhole Sort;</a></li>
+                                    <li><a href="cocktailSort.html">Cocktail Sort;</a></li>
+                                </ul>
+                        </nav>
+                    </div>
+                </div>
+                <a href="paginaInicial.html" class="btn btn-secondary" tabindex="-1" role="button"
+                    aria-disabled="true">Página Inicial</a>
+                <a href="melhorCaso.html" class="btn btn-secondary" tabindex="-1" role="button"
+                    aria-disabled="true">Melhor caso</a>
+                <a href="casoMedio.html" class="btn btn-secondary" tabindex="-1" role="button" aria-disabled="true">Caso
+                    médio</a>
+                <a href="piorCaso.html" class="btn btn-secondary" tabindex="-1" role="button" aria-disabled="true">Pior
+                    caso</a>
+            </div>
+        </div>
+        <div class="col-3 col-s-12">
+            <div class="aside">
+                <h2>Caso Médio</h2>
+            </div>
+        </div>
+        <div class="col-3 col-s-12">
+            <div class="aside">
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">BUBBLE SORT</th>
+                            <th scope="col">T = 1.000</th>
+                            <th scope="col">T = 10.000</th>
+                            <th scope="col">T = 500.000</th>
+                            <th scope="col">T = 1.000.000</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">BUBBLE SORT</th>
+                            <td>0.00s</td>
+                            <td>0.11s</td>
+                            <td>334.14s</td>
+                            <td>1328.97s</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">SELECTION SORT</th>
+                            <td>0.00s</td>
+                            <td>0.03s</td>
+                            <td>58.40s</td>
+                            <td>232.31s</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">INSERTION SORT</th>
+                            <td>0.00s</td>
+                            <td>0.04s</td>
+                            <td>103.11s</td>
+                            <td>416.67s</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">MERGE SORT</th>
+                            <td>0.07s</td>
+                            <td>0.00s</td>
+                            <td>0.07s</td>
+                            <td>0.14s</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">QUICK SORT</th>
+                            <td>0.00s</td>
+                            <td>0.07s</td>
+                            <td>0.13s</td>
+                            <td>0.24s</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">RADIX SORT</th>
+                            <td>0.00s</td>
+                            <td>0.00s</td>
+                            <td>0.05s</td>
+                            <td>0.12s</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">SHELL SORT</th>
+                            <td>0.00s</td>
+                            <td>0.00s</td>
+                            <td>0.05s</td>
+                            <td>0.12s</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">GNOME SORT</th>
+                            <td>0.00s</td>
+                            <td>0.06s</td>
+                            <td>148.81s</td>
+                            <td>594.65s</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PIGEONHOLE SORT</th>
+                            <td>0.00s</td>
+                            <td>0.00s</td>
+                            <td>0.00s</td>
+                            <td>0.01s</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">COCKTAIL SORT</th>
+                            <td>0.00s</td>
+                            <td>0.05s</td>
+                            <td>209.82s</td>
+                            <td>872.37s</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="curve_chart" class="container" class="col-6"></div>
+    </section>
+    <footer>
+        <p>CURSO: SUPERIOR DE TECNOLOGIA EM SISTEMAS PARA INTERNET</p>
+        <p>DISCIPLINA: Estrutura de Dados</p>
+        <p>3° Período – Noturno</p>
+        <p>DOCENTE: Prof° Jonathas Medina</p>
+        <p>ALUNOS: Flávio e Júlia</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['ALGORITMOS', 'BUBBLE SORT', 'BUBBLE SORT', 'INSERTION SORT', 'MERGE SORT', 'QUICK SORT',
+                    'RADIX SORT', 'SHELL SORT', 'GNOME SORT', 'PIGEONHOLE SORT', 'COCKTAIL SORT'],
+                ['1.000', 0.00, 0.00, 0.00, 0.07, 0.00, 0.00, 0.00, 0.00, 0.25, 0.00],
+                ['10.000', 0.11, 0.03, 0.04, 0.00, 0.07, 0.00, 0.00, 0.06, 0.00, 0.05],
+                ['500.000', 334.14, 58.40, 103.11, 0.07, 0.13, 0.03, 0.05, 148.81, 0.00, 209.82],
+                ['1.000.000', 1328.97, 232.31, 416.67, 0.14, 0.24, 0.06, 0.12, 594.65, 0.01, 872.37]
+            ]);
+
+            var options = {
+                title: 'Caso Médio',
+                curveType: 'function',
+                legend: { position: 'bottom' }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+    <div id="curve_chart"></div>
+
+</body>
+
+</html>

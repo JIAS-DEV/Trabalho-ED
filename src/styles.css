@@ -244,7 +244,9 @@ img {
 
 .btn btn-primary{
   position: right;
+  color: #3f3c3c;
 }
+
 
 .offcanvas{
 background-color: #3f3c3c;
@@ -257,5 +259,4 @@ html {
 h1, h2{
   font-size: 2rem;
 }
-
 

@@ -123,18 +123,15 @@ public class AlgoritmosOrdenacao {
     public long radixSort(int[] vetor){ // RADIX SORT
         tempoInicial = System.nanoTime();
         
-        int maximo = 0;
-        
+        int max = 0;
         for(int i = 0; i < vetor.length; i++){
-            if(maximo < vetor[i])
-                maximo = vetor[i];            
+            if(max < vetor[i])
+                max = vetor[i];            
         }
-        
         int digitoMax = 1;
-        
-        while(maximo / 10 > 0){
+        while(max / 10 > 0){
             digitoMax++;
-            maximo = maximo / 10;
+            max = max / 10;
         }
 
         int[][] buckets = new int[10][vetor.length];
@@ -142,11 +139,13 @@ public class AlgoritmosOrdenacao {
 
         for(int i = 0; i < digitoMax; i++){
             int[] auxBucket = new int[10];
+
             for(int j = 0; j < vetor.length; j++){
                 int achaBucket = (vetor[j] % base) / (base / 10);
                 buckets[achaBucket][auxBucket[achaBucket]] = vetor[j];
                 auxBucket[achaBucket]++;
             }
+
             int k = 0;
             for(int b = 0; b < buckets.length; b++)
                 for(int p = 0; p < auxBucket[b]; p++)

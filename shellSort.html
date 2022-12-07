@@ -46,7 +46,7 @@
                         </nav>
                     </div>
                 </div>
-                <a href="paginaInicial.html" class="btn btn-secondary" tabindex="-1" role="button"
+                <a href="index.html" class="btn btn-secondary" tabindex="-1" role="button"
                     aria-disabled="true">Página Inicial</a>
             </div>
         </div>
@@ -77,31 +77,31 @@
             package Ordenacao;
 
             import java.util.Arrays;
-            
+
             public class AlgoritmosOrdenacao {
                 long tempoInicial;
                 long tempoTotal;
                 boolean primeiraIteracao = true;
-            
+
                 public AlgoritmosOrdenacao() {
                 }
-                
+
                 /*
                     ALGORITMOS AUXILIARES
                 */
-                
+
                 private void troca(int[] vetor, int i, int j) {
                     int aux = vetor[i];
                     vetor[i] = vetor[j];
                     vetor[j] = aux;
-                }        
-                
+                }
+
                 /*
                     ALGORITMOS DE ORDENAÇÃO
                 */
                 public long shellSort(int vetor[]) { // SHELL SORT
                     tempoInicial = System.nanoTime();
-            
+
                     for (int intervalo = vetor.length/2; intervalo > 0; intervalo /= 2) {
                         for (int i = intervalo; i < vetor.length; i += 1) {
                             int aux = vetor[i], j;
@@ -110,7 +110,7 @@
                             vetor[j] = aux;
                         }
                     }
-                    
+
                     return tempoTotal = System.nanoTime() - tempoInicial;
                 }
             }

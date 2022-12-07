@@ -67,58 +67,31 @@
                     <div class="aside">
                         <pre>
         <code>
-            package Ordenacao;
+            // PIGEONHOLE SORT
+            public long pigeonHoleSort(int vetor[]) { 
+                tempoInicial = System.nanoTime();
 
-            import java.util.Arrays;
+                int min = vetor[0];
+                int max = vetor[0];
+                int intervalo, index;
 
-            public class AlgoritmosOrdenacao {
-                long tempoInicial;
-                long tempoTotal;
-                boolean primeiraIteracao = true;
-
-                public AlgoritmosOrdenacao() {
+                for(int i = 0; i < vetor.length; i++) {
+                        if(vetor[i] > max)
+                                max = vetor[i];
+                        if(vetor[i] < min)
+                                min = vetor[i];
                 }
+                intervalo = max - min + 1;
 
-                /*
-                    ALGORITMOS AUXILIARES
-                */
+                int[] phole = new int[intervalo];
+                Arrays.fill(phole, 0);
 
-                private void troca(int[] vetor, int i, int j) {
-                    int aux = vetor[i];
-                    vetor[i] = vetor[j];
-                    vetor[j] = aux;
-                }
-
-                /*
-                    ALGORITMOS DE ORDENAÇÃO
-                */
-                public long pigeonHoleSort(int vetor[]) { // PIGEONHOLE SORT
-                    tempoInicial = System.nanoTime();
-
-                    int min = vetor[0];
-                    int max = vetor[0];
-                    int intervalo, index;
-
-                    for(int i = 0; i < vetor.length; i++) {
-                            if(vetor[i] > max)
-                                    max = vetor[i];
-                            if(vetor[i] < min)
-                                    min = vetor[i];
-                    }
-                    intervalo = max - min + 1;
-
-                    int[] phole = new int[intervalo];
-                    Arrays.fill(phole, 0);
-
-                    for(int i = 0; i < vetor.length; i++)
-                        phole[vetor[i] - min]++;
-                    index = 0;
-                    for(int i = 0; i < intervalo; i++)
-                        while(phole[i] --> 0)
-                            vetor[index++] = i + min;
-
-                    return tempoTotal = System.nanoTime() - tempoInicial;
-                }
+                for(int i = 0; i < vetor.length; i++)
+                    phole[vetor[i] - min]++;
+                index = 0;
+                for(int i = 0; i < intervalo; i++)
+                    while(phole[i] --> 0)
+                        vetor[index++] = i + min;
             }
         </code>
     </pre>
@@ -159,8 +132,6 @@
                     </tbody>
                 </table>
                 <div id="curve_chart" class="container" class="col-6"></div>
-            </div>
-        </div>
     </section>
     <footer>
         <p>CURSO: SUPERIOR DE TECNOLOGIA EM SISTEMAS PARA INTERNET</p>

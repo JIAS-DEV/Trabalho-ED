@@ -72,37 +72,32 @@
           <div class="aside">
             <pre>
         <code>
-            package Ordenacao;
+              // MERGE SORT
+              public long mergeSort(int[] vetor) { 
+                  tempoInicial = System.nanoTime();
+                  merge(vetor);
+                  return tempoTotal = System.nanoTime() - tempoInicial;
+              }
 
-            import java.util.Arrays;
-
-            public class AlgoritmosOrdenacao {
-                long tempoInicial;
-                long tempoTotal;
-                boolean primeiraIteracao = true;
-
-                public AlgoritmosOrdenacao() {
-                }
-
-                /*
-                    ALGORITMOS AUXILIARES
-                */
-
-                private void troca(int[] vetor, int i, int j) {
-                    int aux = vetor[i];
-                    vetor[i] = vetor[j];
-                    vetor[j] = aux;
-                }
-
-                /*
-                    ALGORITMOS DE ORDENAÇÃO
-                */
-                public long mergeSort(int[] vetor) { // MERGE SORT
-                    tempoInicial = System.nanoTime();
-                    merge(vetor);
-                    return tempoTotal = System.nanoTime() - tempoInicial;
-                }
-            }
+              private int[] merge(int[] vetor){ 
+                  if(vetor.length <= 1) return vetor;    
+                  int meio = vetor.length >> 1;       
+                  int[] esquerda = Arrays.copyOfRange(vetor, 0, meio);
+                  int[] direita = Arrays.copyOfRange(vetor, meio, vetor.length);        
+                  return sort(merge(esquerda), merge(direita));
+              }
+          
+              private int[] sort(int[] lado1, int[] lado2){
+                  int i = 0, j = 0, k = 0;
+                  int[] completo = new int[lado1.length + lado2.length];        
+                  while(i < lado1.length && j < lado2.length)
+                      completo[k++] = (lado1[i] <= lado2[j]) ? lado1[i++] : lado2[j++];                
+                  while(i < lado1.length)
+                      completo[k++] = lado1[i++];                
+                  while(j < lado2.length)
+                      completo[k++] = lado2[j++];                
+                  return completo;
+              }
         </code>
     </pre>
           </div>
@@ -146,8 +141,6 @@
           </tbody>
         </table>
         <div id="curve_chart" class="container" class="col-6"></div>
-      </div>
-    </div>
   </section>
   <footer>
     <p>CURSO: SUPERIOR DE TECNOLOGIA EM SISTEMAS PARA INTERNET</p>

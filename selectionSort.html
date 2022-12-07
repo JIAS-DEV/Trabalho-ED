@@ -45,8 +45,8 @@
                         </nav>
                     </div>
                 </div>
-                <a href="index.html" class="btn btn-secondary" tabindex="-1" role="button"
-                    aria-disabled="true">Página Inicial</a>
+                <a href="index.html" class="btn btn-secondary" tabindex="-1" role="button" aria-disabled="true">Página
+                    Inicial</a>
             </div>
         </div>
         <div class="col-3 col-s-12">
@@ -68,32 +68,8 @@
                     <div class="aside">
                         <pre>
       <code>
-          package Ordenacao;
-
-          import java.util.Arrays;
-
-          public class AlgoritmosOrdenacao {
-              long tempoInicial;
-              long tempoTotal;
-              boolean primeiraIteracao = true;
-
-              public AlgoritmosOrdenacao() {
-              }
-
-              /*
-                  ALGORITMOS AUXILIARES
-              */
-
-              private void troca(int[] vetor, int i, int j) {
-                  int aux = vetor[i];
-                  vetor[i] = vetor[j];
-                  vetor[j] = aux;
-              }
-
-              /*
-                  ALGORITMOS DE ORDENAÇÃO
-              */
-              public long selectionSort(int[] vetor) { // SELECTION SORT
+              // SELECTION SORT
+              public long selectionSort(int[] vetor) { 
                   tempoInicial = System.nanoTime();
 
                   int tamanho = vetor.length, pos;
@@ -107,9 +83,6 @@
 
                   return tempoTotal = System.nanoTime() - tempoInicial;
               }
-
-          }
-
       </code>
   </pre>
                     </div>
@@ -149,8 +122,6 @@
                     </tbody>
                 </table>
                 <div id="curve_chart" class="container" class="col-6"></div>
-            </div>
-        </div>
     </section>
     <footer>
         <p>CURSO: SUPERIOR DE TECNOLOGIA EM SISTEMAS PARA INTERNET</p>
